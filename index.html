@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FrapPDFy — Professional PDF Generation for Frappe</title>
 <meta name="description" content="Design pixel-perfect PDF print formats for Frappe / ERPNext with WeasyPrint or Playwright. Headers, footers, QR codes, multi-copy, remote delegation.">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -24,9 +25,7 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
-
   body {
     background: var(--bg);
     color: var(--text);
@@ -35,10 +34,9 @@
     line-height: 1.7;
     overflow-x: hidden;
   }
-
   a { color: inherit; text-decoration: none; }
 
-  /* ── NAV ── */
+  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -52,8 +50,19 @@
     align-items: center;
     justify-content: space-between;
   }
-
   .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+  .nav-brand img {
+    width: 30px; height: 30px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .nav-brand-text {
     font-size: 18px;
     font-weight: 700;
     background: linear-gradient(135deg, var(--accent), var(--accent2));
@@ -61,22 +70,18 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-
   .nav-links {
     display: flex;
     gap: 32px;
     list-style: none;
   }
-
   .nav-links a {
     color: var(--muted);
     font-size: 14px;
     font-weight: 500;
     transition: color 0.15s;
   }
-
   .nav-links a:hover { color: var(--text); }
-
   .nav-cta {
     background: var(--accent);
     color: #fff !important;
@@ -86,10 +91,9 @@
     font-size: 13px !important;
     transition: opacity 0.15s !important;
   }
-
   .nav-cta:hover { opacity: 0.88; }
 
-  /* ── HERO ── */
+  /* HERO */
   .hero {
     min-height: 100vh;
     display: flex;
@@ -101,7 +105,6 @@
     position: relative;
     overflow: hidden;
   }
-
   .hero::before {
     content: '';
     position: absolute;
@@ -111,7 +114,6 @@
     background: radial-gradient(ellipse, rgba(79,142,247,0.12) 0%, transparent 70%);
     pointer-events: none;
   }
-
   .hero::after {
     content: '';
     position: absolute;
@@ -120,7 +122,15 @@
     background: radial-gradient(ellipse, rgba(124,92,252,0.08) 0%, transparent 70%);
     pointer-events: none;
   }
-
+  .hero-logo {
+    width: 80px; height: 80px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-bottom: 28px;
+    box-shadow: 0 8px 40px rgba(79,142,247,0.3), 0 0 0 1px rgba(79,142,247,0.15);
+    position: relative;
+    z-index: 1;
+  }
   .hero-badge {
     display: inline-flex;
     align-items: center;
@@ -135,8 +145,9 @@
     margin-bottom: 32px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+    position: relative;
+    z-index: 1;
   }
-
   .hero h1 {
     font-size: clamp(40px, 7vw, 72px);
     font-weight: 800;
@@ -144,15 +155,15 @@
     line-height: 1.08;
     margin-bottom: 24px;
     max-width: 820px;
+    position: relative;
+    z-index: 1;
   }
-
   .hero h1 .grad {
     background: linear-gradient(135deg, #4f8ef7 0%, #7c5cfc 50%, #a855f7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-
   .hero-sub {
     font-size: 18px;
     color: var(--muted);
@@ -160,15 +171,17 @@
     margin-bottom: 44px;
     font-weight: 400;
     line-height: 1.6;
+    position: relative;
+    z-index: 1;
   }
-
   .hero-btns {
     display: flex;
     gap: 14px;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative;
+    z-index: 1;
   }
-
   .btn-primary {
     background: linear-gradient(135deg, var(--accent), var(--accent2));
     color: #fff;
@@ -179,12 +192,7 @@
     transition: transform 0.15s, box-shadow 0.15s;
     box-shadow: 0 4px 24px rgba(79,142,247,0.35);
   }
-
-  .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(79,142,247,0.45);
-  }
-
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(79,142,247,0.45); }
   .btn-secondary {
     background: var(--card);
     border: 1px solid var(--border);
@@ -195,21 +203,16 @@
     font-size: 15px;
     transition: border-color 0.15s, background 0.15s;
   }
-
-  .btn-secondary:hover {
-    border-color: var(--accent);
-    background: rgba(79,142,247,0.06);
-  }
-
-  /* ── BADGES ROW ── */
+  .btn-secondary:hover { border-color: var(--accent); background: rgba(79,142,247,0.06); }
   .badges {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 52px;
+    position: relative;
+    z-index: 1;
   }
-
   .tech-badge {
     background: var(--card);
     border: 1px solid var(--border);
@@ -223,320 +226,118 @@
     gap: 6px;
   }
 
-  /* ── FLOW DIAGRAM ── */
-  .flow-section {
-    padding: 80px 24px;
-    max-width: 860px;
-    margin: 0 auto;
-  }
-
+  /* SECTIONS */
+  .flow-section { padding: 80px 24px; max-width: 860px; margin: 0 auto; }
   .section-label {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--accent);
-    margin-bottom: 12px;
-    text-align: center;
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 2px; color: var(--accent); margin-bottom: 12px; text-align: center;
   }
-
   .section-heading {
-    font-size: clamp(24px, 4vw, 38px);
-    font-weight: 700;
-    letter-spacing: -1px;
-    text-align: center;
-    margin-bottom: 16px;
+    font-size: clamp(24px, 4vw, 38px); font-weight: 700;
+    letter-spacing: -1px; text-align: center; margin-bottom: 16px;
   }
-
   .section-sub {
-    text-align: center;
-    color: var(--muted);
-    max-width: 520px;
-    margin: 0 auto 52px;
-    font-size: 15px;
+    text-align: center; color: var(--muted); max-width: 520px;
+    margin: 0 auto 52px; font-size: 15px;
   }
-
-  /* ── FEATURES GRID ── */
-  .features-section {
-    padding: 80px 24px;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
+  .features-section { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
   .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 52px;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px; margin-top: 52px;
   }
-
   .feature-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 28px;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 28px;
     transition: border-color 0.2s, transform 0.2s;
   }
+  .feature-card:hover { border-color: rgba(79,142,247,0.4); transform: translateY(-3px); }
+  .feature-icon { font-size: 28px; margin-bottom: 14px; display: block; }
+  .feature-title { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+  .feature-desc { color: var(--muted); font-size: 13.5px; line-height: 1.6; }
 
-  .feature-card:hover {
-    border-color: rgba(79,142,247,0.4);
-    transform: translateY(-3px);
-  }
-
-  .feature-icon {
-    font-size: 28px;
-    margin-bottom: 14px;
-    display: block;
-  }
-
-  .feature-title {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: var(--text);
-  }
-
-  .feature-desc {
-    color: var(--muted);
-    font-size: 13.5px;
-    line-height: 1.6;
-  }
-
-  /* ── ENGINE COMPARE ── */
-  .compare-section {
-    padding: 80px 24px;
-    max-width: 860px;
-    margin: 0 auto;
-  }
-
-  .compare-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 40px;
-    font-size: 14px;
-  }
-
+  /* ENGINE COMPARE */
+  .compare-section { padding: 80px 24px; max-width: 860px; margin: 0 auto; }
+  .compare-table { width: 100%; border-collapse: collapse; margin-top: 40px; font-size: 14px; }
   .compare-table th {
-    background: var(--surface);
-    padding: 14px 20px;
-    text-align: left;
-    border: 1px solid var(--border);
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--muted);
+    background: var(--surface); padding: 14px 20px; text-align: left;
+    border: 1px solid var(--border); font-size: 13px; font-weight: 600; color: var(--muted);
   }
-
   .compare-table th:first-child { width: 45%; }
-
-  .compare-table td {
-    padding: 12px 20px;
-    border: 1px solid var(--border);
-    vertical-align: middle;
-  }
-
+  .compare-table td { padding: 12px 20px; border: 1px solid var(--border); vertical-align: middle; }
   .compare-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
-
   .yes { color: var(--green); font-weight: 600; }
   .no  { color: #f87171; font-weight: 600; }
   .partial { color: var(--yellow); font-weight: 600; }
 
-  /* ── INSTALL ── */
-  .install-section {
-    padding: 80px 24px;
-    max-width: 860px;
-    margin: 0 auto;
-  }
-
-  .steps {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .step {
-    display: flex;
-    gap: 24px;
-    position: relative;
-  }
-
+  /* INSTALL */
+  .install-section { padding: 80px 24px; max-width: 860px; margin: 0 auto; }
+  .steps { margin-top: 40px; display: flex; flex-direction: column; gap: 0; }
+  .step { display: flex; gap: 24px; position: relative; }
   .step:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    left: 19px;
-    top: 44px;
-    bottom: 0;
-    width: 2px;
-    background: var(--border);
+    content: ''; position: absolute; left: 19px; top: 44px; bottom: 0;
+    width: 2px; background: var(--border);
   }
-
   .step-num {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(79,142,247,0.15);
-    border: 2px solid rgba(79,142,247,0.4);
-    color: var(--accent);
-    font-weight: 700;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    z-index: 1;
+    width: 40px; height: 40px; border-radius: 50%;
+    background: rgba(79,142,247,0.15); border: 2px solid rgba(79,142,247,0.4);
+    color: var(--accent); font-weight: 700; font-size: 15px;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 1;
   }
-
-  .step-body {
-    padding-bottom: 36px;
-    flex: 1;
-  }
-
-  .step-title {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    margin-top: 8px;
-  }
-
-  .step-desc {
-    color: var(--muted);
-    font-size: 13.5px;
-    margin-bottom: 12px;
-  }
-
+  .step-body { padding-bottom: 36px; flex: 1; }
+  .step-title { font-size: 16px; font-weight: 700; margin-bottom: 8px; margin-top: 8px; }
+  .step-desc { color: var(--muted); font-size: 13.5px; margin-bottom: 12px; }
   pre.install-code {
-    background: #0a0d17;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 16px 20px;
-    overflow-x: auto;
-    font-family: var(--mono);
-    font-size: 12.5px;
-    line-height: 1.7;
-    color: #a6e3a1;
+    background: #0a0d17; border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px 20px; overflow-x: auto; font-family: var(--mono);
+    font-size: 12.5px; line-height: 1.7; color: #a6e3a1;
   }
-
   pre.install-code .prompt { color: #585b70; user-select: none; }
 
-  /* ── REMOTE SECTION ── */
-  .remote-section {
-    padding: 80px 24px;
-    max-width: 860px;
-    margin: 0 auto;
-  }
-
+  /* REMOTE */
+  .remote-section { padding: 80px 24px; max-width: 860px; margin: 0 auto; }
   .remote-flow {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 32px;
-    margin-top: 32px;
-    display: flex;
-    gap: 0;
-    align-items: center;
-    flex-wrap: wrap;
+    background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+    padding: 32px; margin-top: 32px; display: flex; gap: 0; align-items: center; flex-wrap: wrap;
   }
-
-  .rf-site {
-    flex: 1;
-    min-width: 180px;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .rf-site-label {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: var(--muted);
-    margin-bottom: 10px;
-  }
-
+  .rf-site { flex: 1; min-width: 180px; text-align: center; padding: 20px; }
+  .rf-site-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin-bottom: 10px; }
   .rf-site-name {
-    background: rgba(79,142,247,0.1);
-    border: 1px solid rgba(79,142,247,0.3);
-    border-radius: 10px;
-    padding: 16px 20px;
-    font-weight: 700;
-    color: var(--accent);
-    font-size: 15px;
+    background: rgba(79,142,247,0.1); border: 1px solid rgba(79,142,247,0.3);
+    border-radius: 10px; padding: 16px 20px; font-weight: 700; color: var(--accent); font-size: 15px;
   }
-
-  .rf-arrow {
-    flex-shrink: 0;
-    text-align: center;
-    padding: 0 16px;
-    color: var(--muted);
-    font-size: 13px;
-  }
-
+  .rf-arrow { flex-shrink: 0; text-align: center; padding: 0 16px; color: var(--muted); font-size: 13px; }
   .rf-arrow .arrow { font-size: 22px; color: var(--border); display: block; }
   .rf-arrow .label { font-size: 11px; margin-top: 4px; }
 
-  /* ── DOCS CARDS ── */
-  .docs-section {
-    padding: 80px 24px;
-    max-width: 860px;
-    margin: 0 auto;
-  }
-
-  .doc-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 20px;
-    margin-top: 40px;
-  }
-
+  /* DOCS */
+  .docs-section { padding: 80px 24px; max-width: 860px; margin: 0 auto; }
+  .doc-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; margin-top: 40px; }
   .doc-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 28px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+    padding: 28px; display: flex; flex-direction: column; gap: 12px;
     transition: border-color 0.2s, transform 0.2s;
   }
-
-  .doc-card:hover {
-    border-color: rgba(79,142,247,0.4);
-    transform: translateY(-3px);
-  }
-
+  .doc-card:hover { border-color: rgba(79,142,247,0.4); transform: translateY(-3px); }
   .doc-card-icon { font-size: 32px; }
   .doc-card-title { font-size: 17px; font-weight: 700; }
   .doc-card-desc { color: var(--muted); font-size: 13.5px; flex: 1; }
   .doc-card-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--accent);
-    margin-top: 4px;
-    transition: gap 0.15s;
+    display: inline-flex; align-items: center; gap: 6px; font-size: 13px;
+    font-weight: 600; color: var(--accent); margin-top: 4px; transition: gap 0.15s;
   }
   .doc-card:hover .doc-card-link { gap: 10px; }
 
-  /* ── FOOTER ── */
-  footer {
-    border-top: 1px solid var(--border);
-    padding: 40px 24px;
-    text-align: center;
-    color: var(--muted);
-    font-size: 13px;
-  }
-
+  /* FOOTER */
+  footer { border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; color: var(--muted); font-size: 13px; }
   footer a { color: var(--accent); }
-
-  /* ── UTIL ── */
-  .divider {
-    border: none;
-    border-top: 1px solid var(--border);
-    max-width: 860px;
-    margin: 0 auto;
+  .footer-brand {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-bottom: 14px;
   }
+  .footer-brand img { width: 24px; height: 24px; border-radius: 6px; object-fit: cover; }
+  .footer-brand span { font-weight: 700; color: var(--text); font-size: 15px; }
+
+  .divider { border: none; border-top: 1px solid var(--border); max-width: 860px; margin: 0 auto; }
 
   @media (max-width: 640px) {
     nav { padding: 0 16px; }
@@ -550,7 +351,10 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-brand">⚡ FrapPDFy</div>
+  <a href="#" class="nav-brand">
+    <img src="FrapPDFy_icon_05_css_brace.png" alt="FrapPDFy Logo">
+    <span class="nav-brand-text">FrapPDFy</span>
+  </a>
   <ul class="nav-links">
     <li><a href="#features">Features</a></li>
     <li><a href="#how-it-works">How It Works</a></li>
@@ -564,8 +368,9 @@
 
 <!-- HERO -->
 <section class="hero">
+  <img src="logo1.png" alt="FrapPDFy Logo" class="hero-logo">
   <div class="hero-badge">⚡ Frappe Application</div>
-  <h1>Professional PDF generation<br>for <span class="grad">Frappe & ERPNext</span></h1>
+  <h1>Professional PDF generation<br>for <span class="grad">Frappe &amp; ERPNext</span></h1>
   <p class="hero-sub">Design pixel-perfect print formats with Jinja2 templates, rendered by WeasyPrint or Playwright — with repeating headers, page numbers, QR codes, and multi-copy output.</p>
   <div class="hero-btns">
     <a href="print-format-guide.html" class="btn-primary">📖 Open Documentation</a>
@@ -588,53 +393,16 @@
   <div class="section-label">Features</div>
   <div class="section-heading">Everything you need for production PDFs</div>
   <p class="section-sub">FrapPDFy handles the hard parts — layout, measurement, multi-copy, and remote delegation — so you can focus on your template design.</p>
-
   <div class="features-grid">
-    <div class="feature-card">
-      <span class="feature-icon">⚙️</span>
-      <div class="feature-title">Dual PDF Engine</div>
-      <p class="feature-desc">Choose WeasyPrint for CSS paged media and counters, or Playwright (Chromium) for full CSS/JS support. Selectable per template, with automatic fallback.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">📰</span>
-      <div class="feature-title">Repeating Headers & Footers</div>
-      <p class="feature-desc">Define <code style="font-family:monospace;font-size:12px;background:#0a0d17;padding:1px 5px;border-radius:4px">.pdf-header</code> and <code style="font-family:monospace;font-size:12px;background:#0a0d17;padding:1px 5px;border-radius:4px">.pdf-footer</code>. Heights are auto-measured so content is never clipped or overlapping.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">🔢</span>
-      <div class="feature-title">Page Numbers</div>
-      <p class="feature-desc">CSS counter-based page numbers for WeasyPrint (<code style="font-family:monospace;font-size:12px;background:#0a0d17;padding:1px 5px;border-radius:4px">counter(page)</code>) and Chromium template classes for Playwright.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">📑</span>
-      <div class="feature-title">Multi-Copy with Labels</div>
-      <p class="feature-desc">Generate Original / Duplicate / Triplicate in one PDF. Inject different text into each copy using CSS class selectors and a simple JSON config.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">◼</span>
-      <div class="feature-title">QR Code Support</div>
-      <p class="feature-desc">Render e-Invoice QR codes via Frappe Web Template blocks. Size them with a simple CSS class override.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">🖼️</span>
-      <div class="feature-title">Image Handling</div>
-      <p class="feature-desc">Automatically resolves Frappe Attach field values to absolute URLs so images always render correctly in the PDF, regardless of engine.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">🌐</span>
-      <div class="feature-title">Remote PDF Delegation</div>
-      <p class="feature-desc">Offload PDF rendering to a dedicated remote Frappe site. Useful when production sites can't run Playwright or need isolated rendering capacity.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">🔒</span>
-      <div class="feature-title">Secure Remote Auth</div>
-      <p class="feature-desc">Remote delegation uses Frappe's standard token authentication. API secrets are stored encrypted in the database.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">🔍</span>
-      <div class="feature-title">Debug Mode</div>
-      <p class="feature-desc">Enable verbose logging per template. Every measurement, margin calculation, and routing decision is logged with a unique error code for easy tracing.</p>
-    </div>
+    <div class="feature-card"><span class="feature-icon">⚙️</span><div class="feature-title">Dual PDF Engine</div><p class="feature-desc">Choose WeasyPrint for CSS paged media and counters, or Playwright (Chromium) for full CSS/JS support. Selectable per template, with automatic fallback.</p></div>
+    <div class="feature-card"><span class="feature-icon">📰</span><div class="feature-title">Repeating Headers &amp; Footers</div><p class="feature-desc">Define <code style="font-family:monospace;font-size:12px;background:#0a0d17;padding:1px 5px;border-radius:4px">.pdf-header</code> and <code style="font-family:monospace;font-size:12px;background:#0a0d17;padding:1px 5px;border-radius:4px">.pdf-footer</code>. Heights are auto-measured so content is never clipped or overlapping.</p></div>
+    <div class="feature-card"><span class="feature-icon">🔢</span><div class="feature-title">Page Numbers</div><p class="feature-desc">CSS counter-based page numbers for WeasyPrint (<code style="font-family:monospace;font-size:12px;background:#0a0d17;padding:1px 5px;border-radius:4px">counter(page)</code>) and Chromium template classes for Playwright.</p></div>
+    <div class="feature-card"><span class="feature-icon">📑</span><div class="feature-title">Multi-Copy with Labels</div><p class="feature-desc">Generate Original / Duplicate / Triplicate in one PDF. Inject different text into each copy using CSS class selectors and a simple JSON config.</p></div>
+    <div class="feature-card"><span class="feature-icon">◼</span><div class="feature-title">QR Code Support</div><p class="feature-desc">Render e-Invoice QR codes via Frappe Web Template blocks. Size them with a simple CSS class override.</p></div>
+    <div class="feature-card"><span class="feature-icon">🖼️</span><div class="feature-title">Image Handling</div><p class="feature-desc">Automatically resolves Frappe Attach field values to absolute URLs so images always render correctly in the PDF, regardless of engine.</p></div>
+    <div class="feature-card"><span class="feature-icon">🌐</span><div class="feature-title">Remote PDF Delegation</div><p class="feature-desc">Offload PDF rendering to a dedicated remote Frappe site. Useful when production sites can't run Playwright or need isolated rendering capacity.</p></div>
+    <div class="feature-card"><span class="feature-icon">🔒</span><div class="feature-title">Secure Remote Auth</div><p class="feature-desc">Remote delegation uses Frappe's standard token authentication. API secrets are stored encrypted in the database.</p></div>
+    <div class="feature-card"><span class="feature-icon">🔍</span><div class="feature-title">Debug Mode</div><p class="feature-desc">Enable verbose logging per template. Every measurement, margin calculation, and routing decision is logged with a unique error code for easy tracing.</p></div>
   </div>
 </section>
 
@@ -645,53 +413,31 @@
   <div class="section-label">Architecture</div>
   <div class="section-heading">How it works</div>
   <p class="section-sub">From a Frappe document to a downloaded PDF in five clean steps.</p>
-
   <div style="margin-top:40px; display:flex; flex-direction:column; gap:0;">
-
     <div style="display:flex; gap:20px; align-items:flex-start; padding-bottom:32px; position:relative;">
       <div style="width:40px;height:40px;border-radius:50%;background:rgba(79,142,247,0.15);border:2px solid rgba(79,142,247,0.4);color:var(--accent);font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1">1</div>
       <div style="position:absolute;left:19px;top:44px;bottom:0;width:2px;background:var(--border)"></div>
-      <div style="padding-top:8px">
-        <div style="font-weight:700;font-size:16px;margin-bottom:6px">Render Jinja2 Template</div>
-        <div style="color:var(--muted);font-size:13.5px">The HTML template stored in Print Format Template is rendered against the Frappe document using <code style="font-family:monospace;font-size:12px;background:#0a0d17;padding:1px 5px;border-radius:4px">frappe.render_template()</code>, producing a static HTML string with real data.</div>
-      </div>
+      <div style="padding-top:8px"><div style="font-weight:700;font-size:16px;margin-bottom:6px">Render Jinja2 Template</div><div style="color:var(--muted);font-size:13.5px">The HTML template stored in Print Format Template is rendered against the Frappe document using <code style="font-family:monospace;font-size:12px;background:#0a0d17;padding:1px 5px;border-radius:4px">frappe.render_template()</code>, producing a static HTML string with real data.</div></div>
     </div>
-
     <div style="display:flex; gap:20px; align-items:flex-start; padding-bottom:32px; position:relative;">
       <div style="width:40px;height:40px;border-radius:50%;background:rgba(79,142,247,0.15);border:2px solid rgba(79,142,247,0.4);color:var(--accent);font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1">2</div>
       <div style="position:absolute;left:19px;top:44px;bottom:0;width:2px;background:var(--border)"></div>
-      <div style="padding-top:8px">
-        <div style="font-weight:700;font-size:16px;margin-bottom:6px">Extract Regions</div>
-        <div style="color:var(--muted);font-size:13.5px">BeautifulSoup parses the HTML and extracts the three regions: <code style="font-family:monospace;font-size:12px;background:#0a0d17;padding:1px 5px;border-radius:4px">.pdf-header</code>, <code style="font-family:monospace;font-size:12px;background:#0a0d17;padding:1px 5px;border-radius:4px">.pdf-content</code>, and <code style="font-family:monospace;font-size:12px;background:#0a0d17;padding:1px 5px;border-radius:4px">.pdf-footer</code>.</div>
-      </div>
+      <div style="padding-top:8px"><div style="font-weight:700;font-size:16px;margin-bottom:6px">Extract Regions</div><div style="color:var(--muted);font-size:13.5px">BeautifulSoup parses the HTML and extracts the three regions: <code style="font-family:monospace;font-size:12px;background:#0a0d17;padding:1px 5px;border-radius:4px">.pdf-header</code>, <code style="font-family:monospace;font-size:12px;background:#0a0d17;padding:1px 5px;border-radius:4px">.pdf-content</code>, and <code style="font-family:monospace;font-size:12px;background:#0a0d17;padding:1px 5px;border-radius:4px">.pdf-footer</code>.</div></div>
     </div>
-
     <div style="display:flex; gap:20px; align-items:flex-start; padding-bottom:32px; position:relative;">
       <div style="width:40px;height:40px;border-radius:50%;background:rgba(79,142,247,0.15);border:2px solid rgba(79,142,247,0.4);color:var(--accent);font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1">3</div>
       <div style="position:absolute;left:19px;top:44px;bottom:0;width:2px;background:var(--border)"></div>
-      <div style="padding-top:8px">
-        <div style="font-weight:700;font-size:16px;margin-bottom:6px">Route — Local or Remote</div>
-        <div style="color:var(--muted);font-size:13.5px">If a remote service URL is configured in FrapPDFy Settings, the static HTML payload is POSTed to the remote site. Otherwise rendering happens locally.</div>
-      </div>
+      <div style="padding-top:8px"><div style="font-weight:700;font-size:16px;margin-bottom:6px">Route — Local or Remote</div><div style="color:var(--muted);font-size:13.5px">If a remote service URL is configured in FrapPDFy Settings, the static HTML payload is POSTed to the remote site. Otherwise rendering happens locally.</div></div>
     </div>
-
     <div style="display:flex; gap:20px; align-items:flex-start; padding-bottom:32px; position:relative;">
       <div style="width:40px;height:40px;border-radius:50%;background:rgba(79,142,247,0.15);border:2px solid rgba(79,142,247,0.4);color:var(--accent);font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1">4</div>
       <div style="position:absolute;left:19px;top:44px;bottom:0;width:2px;background:var(--border)"></div>
-      <div style="padding-top:8px">
-        <div style="font-weight:700;font-size:16px;margin-bottom:6px">Generate PDF per Copy</div>
-        <div style="color:var(--muted);font-size:13.5px">For multi-copy prints, dynamic values are injected per copy (e.g. "Original", "Duplicate"), then each copy is rendered as a separate PDF by the chosen engine.</div>
-      </div>
+      <div style="padding-top:8px"><div style="font-weight:700;font-size:16px;margin-bottom:6px">Generate PDF per Copy</div><div style="color:var(--muted);font-size:13.5px">For multi-copy prints, dynamic values are injected per copy (e.g. "Original", "Duplicate"), then each copy is rendered as a separate PDF by the chosen engine.</div></div>
     </div>
-
     <div style="display:flex; gap:20px; align-items:flex-start;">
       <div style="width:40px;height:40px;border-radius:50%;background:rgba(52,211,153,0.15);border:2px solid rgba(52,211,153,0.4);color:var(--green);font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">5</div>
-      <div style="padding-top:8px">
-        <div style="font-weight:700;font-size:16px;margin-bottom:6px">Merge & Download</div>
-        <div style="color:var(--muted);font-size:13.5px">All copy PDFs are merged via PyPDF2 into a single file, then streamed to the browser as an <code style="font-family:monospace;font-size:12px;background:#0a0d17;padding:1px 5px;border-radius:4px">application/pdf</code> download.</div>
-      </div>
+      <div style="padding-top:8px"><div style="font-weight:700;font-size:16px;margin-bottom:6px">Merge &amp; Download</div><div style="color:var(--muted);font-size:13.5px">All copy PDFs are merged via PyPDF2 into a single file, then streamed to the browser as an <code style="font-family:monospace;font-size:12px;background:#0a0d17;padding:1px 5px;border-radius:4px">application/pdf</code> download.</div></div>
     </div>
-
   </div>
 </section>
 
@@ -702,15 +448,8 @@
   <div class="section-label">Engines</div>
   <div class="section-heading">WeasyPrint vs Playwright</div>
   <p class="section-sub">Both engines are supported. The right choice depends on your template's CSS requirements and server environment.</p>
-
   <table class="compare-table">
-    <thead>
-      <tr>
-        <th>Feature</th>
-        <th>WeasyPrint</th>
-        <th>Playwright (Chromium)</th>
-      </tr>
-    </thead>
+    <thead><tr><th>Feature</th><th>WeasyPrint</th><th>Playwright (Chromium)</th></tr></thead>
     <tbody>
       <tr><td>CSS Paged Media (<code style="font-family:monospace;font-size:12px">@page</code>)</td><td class="yes">✅ Full support</td><td class="no">❌ Not supported</td></tr>
       <tr><td>CSS counters for page numbers</td><td class="yes">✅</td><td class="no">❌</td></tr>
@@ -722,7 +461,6 @@
       <tr><td>Memory usage</td><td>Lower</td><td>Higher</td></tr>
     </tbody>
   </table>
-
   <div style="background:rgba(52,211,153,0.06);border:1px solid rgba(52,211,153,0.2);border-radius:10px;padding:16px 20px;margin-top:20px;font-size:13.5px;color:var(--muted)">
     💡 <strong style="color:var(--text)">Recommendation:</strong> Use <strong style="color:var(--green)">WeasyPrint</strong> for document-style invoices and reports. Use <strong style="color:var(--accent)">Playwright</strong> for modern layouts needing full CSS Grid/Flexbox or JavaScript.
   </div>
@@ -735,51 +473,17 @@
   <div class="section-label">Getting Started</div>
   <div class="section-heading">Installation</div>
   <p class="section-sub">Install FrapPDFy on any Frappe bench in four steps.</p>
-
   <div class="steps">
-
-    <div class="step">
-      <div class="step-num">1</div>
-      <div class="step-body">
-        <div class="step-title">Get the app</div>
-        <p class="step-desc">Clone the repository into your bench using <code style="font-family:monospace;font-size:12px">bench get-app</code>.</p>
-        <pre class="install-code"><span class="prompt">$ </span>bench get-app https://github.com/krunal1904/frappdfy.git</pre>
-      </div>
-    </div>
-
-    <div class="step">
-      <div class="step-num">2</div>
-      <div class="step-body">
-        <div class="step-title">Install on your site</div>
-        <p class="step-desc">Replace <code style="font-family:monospace;font-size:12px">your-site.local</code> with your actual site name.</p>
-        <pre class="install-code"><span class="prompt">$ </span>bench --site your-site.local install-app frappdfy</pre>
-      </div>
-    </div>
-
-    <div class="step">
-      <div class="step-num">3</div>
-      <div class="step-body">
-        <div class="step-title">Install Python dependencies</div>
-        <p class="step-desc">WeasyPrint is required. Playwright is optional — only needed if you want the Chromium engine.</p>
-        <pre class="install-code"><span class="prompt"># </span>Required
+    <div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-title">Get the app</div><p class="step-desc">Clone the repository into your bench using <code style="font-family:monospace;font-size:12px">bench get-app</code>.</p><pre class="install-code"><span class="prompt">$ </span>bench get-app https://github.com/krunal1904/frappdfy.git</pre></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-title">Install on your site</div><p class="step-desc">Replace <code style="font-family:monospace;font-size:12px">your-site.local</code> with your actual site name.</p><pre class="install-code"><span class="prompt">$ </span>bench --site your-site.local install-app frappdfy</pre></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-title">Install Python dependencies</div><p class="step-desc">WeasyPrint is required. Playwright is optional — only needed if you want the Chromium engine.</p><pre class="install-code"><span class="prompt"># </span>Required
 <span class="prompt">$ </span>bench pip install weasyprint beautifulsoup4 PyPDF2
 
 <span class="prompt"># </span>Optional — Playwright / Chromium engine
 <span class="prompt">$ </span>bench pip install playwright
-<span class="prompt">$ </span>python -m playwright install chromium</pre>
-      </div>
-    </div>
-
-    <div class="step">
-      <div class="step-num">4</div>
-      <div class="step-body">
-        <div class="step-title">Migrate &amp; restart</div>
-        <p class="step-desc">Run migrations to create the new doctypes, then restart your bench.</p>
-        <pre class="install-code"><span class="prompt">$ </span>bench --site your-site.local migrate
-<span class="prompt">$ </span>bench restart</pre>
-      </div>
-    </div>
-
+<span class="prompt">$ </span>python -m playwright install chromium</pre></div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-title">Migrate &amp; restart</div><p class="step-desc">Run migrations to create the new doctypes, then restart your bench.</p><pre class="install-code"><span class="prompt">$ </span>bench --site your-site.local migrate
+<span class="prompt">$ </span>bench restart</pre></div></div>
   </div>
 </section>
 
@@ -790,46 +494,17 @@
   <div class="section-label">Remote PDF Service</div>
   <div class="section-heading">Delegate rendering to a dedicated site</div>
   <p class="section-sub">Useful when your production site can't run Playwright, or when you want to isolate PDF rendering capacity.</p>
-
   <div class="remote-flow">
-    <div class="rf-site">
-      <div class="rf-site-label">Production Site</div>
-      <div class="rf-site-name">🏭 your-erp.com</div>
-      <div style="color:var(--muted);font-size:12px;margin-top:10px">Renders Jinja2<br>Extracts HTML regions</div>
-    </div>
-    <div class="rf-arrow">
-      <span class="arrow">→</span>
-      <div class="label">POST static HTML<br>+ settings + auth</div>
-    </div>
-    <div class="rf-site">
-      <div class="rf-site-label">PDF Service Site</div>
-      <div class="rf-site-name">⚡ pdf.yourcompany.com</div>
-      <div style="color:var(--muted);font-size:12px;margin-top:10px">Runs WeasyPrint<br>or Playwright</div>
-    </div>
-    <div class="rf-arrow">
-      <span class="arrow">→</span>
-      <div class="label">Returns<br>Base64 PDF</div>
-    </div>
-    <div class="rf-site">
-      <div class="rf-site-label">Browser</div>
-      <div class="rf-site-name">💻 Download PDF</div>
-      <div style="color:var(--muted);font-size:12px;margin-top:10px">application/pdf<br>streamed directly</div>
-    </div>
+    <div class="rf-site"><div class="rf-site-label">Production Site</div><div class="rf-site-name">🏭 your-erp.com</div><div style="color:var(--muted);font-size:12px;margin-top:10px">Renders Jinja2<br>Extracts HTML regions</div></div>
+    <div class="rf-arrow"><span class="arrow">→</span><div class="label">POST static HTML<br>+ settings + auth</div></div>
+    <div class="rf-site"><div class="rf-site-label">PDF Service Site</div><div class="rf-site-name">⚡ pdf.yourcompany.com</div><div style="color:var(--muted);font-size:12px;margin-top:10px">Runs WeasyPrint<br>or Playwright</div></div>
+    <div class="rf-arrow"><span class="arrow">→</span><div class="label">Returns<br>Base64 PDF</div></div>
+    <div class="rf-site"><div class="rf-site-label">Browser</div><div class="rf-site-name">💻 Download PDF</div><div style="color:var(--muted);font-size:12px;margin-top:10px">application/pdf<br>streamed directly</div></div>
   </div>
-
   <div style="margin-top:28px;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;">
-    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px">
-      <div style="font-weight:700;margin-bottom:6px">🔒 Authenticated</div>
-      <div style="color:var(--muted);font-size:13px">Uses Frappe's standard token auth. API secrets stored encrypted.</div>
-    </div>
-    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px">
-      <div style="font-weight:700;margin-bottom:6px">🔁 Auto-fallback</div>
-      <div style="color:var(--muted);font-size:13px">If Playwright is unavailable on the remote, it falls back to WeasyPrint automatically.</div>
-    </div>
-    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px">
-      <div style="font-weight:700;margin-bottom:6px">📦 Zero template transfer</div>
-      <div style="color:var(--muted);font-size:13px">Only static HTML is sent — no doctype, no raw data, no template source.</div>
-    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px"><div style="font-weight:700;margin-bottom:6px">🔒 Authenticated</div><div style="color:var(--muted);font-size:13px">Uses Frappe's standard token auth. API secrets stored encrypted.</div></div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px"><div style="font-weight:700;margin-bottom:6px">🔁 Auto-fallback</div><div style="color:var(--muted);font-size:13px">If Playwright is unavailable on the remote, it falls back to WeasyPrint automatically.</div></div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px"><div style="font-weight:700;margin-bottom:6px">📦 Zero template transfer</div><div style="color:var(--muted);font-size:13px">Only static HTML is sent — no doctype, no raw data, no template source.</div></div>
   </div>
 </section>
 
@@ -840,40 +515,21 @@
   <div class="section-label">Documentation</div>
   <div class="section-heading">Everything in one place</div>
   <p class="section-sub">Comprehensive guides covering every feature of FrapPDFy.</p>
-
   <div class="doc-cards">
-    <a href="print-format-guide.html" class="doc-card">
-      <div class="doc-card-icon">🖨️</div>
-      <div class="doc-card-title">Print Format Guide</div>
-      <p class="doc-card-desc">Complete reference for building HTML templates — headers, footers, images, QR codes, page numbers, multi-copy labels, and more.</p>
-      <span class="doc-card-link">Open guide →</span>
-    </a>
-    <a href="https://github.com/krunal1904/frappdfy#installation" class="doc-card" target="_blank">
-      <div class="doc-card-icon">📦</div>
-      <div class="doc-card-title">Installation Guide</div>
-      <p class="doc-card-desc">Step-by-step setup for WeasyPrint, Playwright, and the FrapPDFy app on any Frappe bench.</p>
-      <span class="doc-card-link">View on GitHub →</span>
-    </a>
-    <a href="https://github.com/krunal1904/frappdfy#remote-pdf-service" class="doc-card" target="_blank">
-      <div class="doc-card-icon">🌐</div>
-      <div class="doc-card-title">Remote Service Setup</div>
-      <p class="doc-card-desc">Configure cross-site PDF delegation with token authentication and automatic engine fallback.</p>
-      <span class="doc-card-link">Read docs →</span>
-    </a>
-    <a href="https://github.com/krunal1904/frappdfy/issues" class="doc-card" target="_blank">
-      <div class="doc-card-icon">🐛</div>
-      <div class="doc-card-title">Report an Issue</div>
-      <p class="doc-card-desc">Found a bug or have a feature request? Open an issue on GitHub and we'll look into it.</p>
-      <span class="doc-card-link">Open issue →</span>
-    </a>
+    <a href="print-format-guide.html" class="doc-card"><div class="doc-card-icon">🖨️</div><div class="doc-card-title">Print Format Guide</div><p class="doc-card-desc">Complete reference for building HTML templates — headers, footers, images, QR codes, page numbers, multi-copy labels, and more.</p><span class="doc-card-link">Open guide →</span></a>
+    <a href="https://github.com/krunal1904/frappdfy#installation" class="doc-card" target="_blank"><div class="doc-card-icon">📦</div><div class="doc-card-title">Installation Guide</div><p class="doc-card-desc">Step-by-step setup for WeasyPrint, Playwright, and the FrapPDFy app on any Frappe bench.</p><span class="doc-card-link">View on GitHub →</span></a>
+    <a href="https://github.com/krunal1904/frappdfy#remote-pdf-service" class="doc-card" target="_blank"><div class="doc-card-icon">🌐</div><div class="doc-card-title">Remote Service Setup</div><p class="doc-card-desc">Configure cross-site PDF delegation with token authentication and automatic engine fallback.</p><span class="doc-card-link">Read docs →</span></a>
+    <a href="https://github.com/krunal1904/frappdfy/issues" class="doc-card" target="_blank"><div class="doc-card-icon">🐛</div><div class="doc-card-title">Report an Issue</div><p class="doc-card-desc">Found a bug or have a feature request? Open an issue on GitHub and we'll look into it.</p><span class="doc-card-link">Open issue →</span></a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div style="margin-bottom:12px">
-    <strong style="color:var(--text)">⚡ FrapPDFy</strong> — Professional PDF generation for Frappe &amp; ERPNext
+  <div class="footer-brand">
+    <img src="logo1.png" alt="FrapPDFy Logo">
+    <span>FrapPDFy</span>
   </div>
+  <div style="color:var(--muted);margin-bottom:14px;font-size:13px">Professional PDF generation for Frappe &amp; ERPNext</div>
   <div>
     <a href="https://github.com/krunal1904/frappdfy" target="_blank">GitHub</a> ·
     <a href="print-format-guide.html">Documentation</a> ·

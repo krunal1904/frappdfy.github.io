@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FrapPDFy — Print Format Developer Guide</title>
+<link rel="icon" type="image/png" href="https://frappdfy.pages.dev/FrapPDFy-32x32.png">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -32,11 +33,7 @@
     line-height: 1.7;
   }
 
-  /* ── Layout ── */
-  .shell {
-    display: flex;
-    min-height: 100vh;
-  }
+  .shell { display: flex; min-height: 100vh; }
 
   /* ── Sidebar ── */
   .sidebar {
@@ -55,278 +52,175 @@
     padding: 0 20px 24px;
     border-bottom: 1px solid var(--border);
     margin-bottom: 16px;
-  }
-
-  .sidebar-logo .brand {
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--accent);
-    letter-spacing: -0.3px;
-  }
-
-  .sidebar-logo .sub {
-    font-size: 11px;
-    color: var(--muted);
-    margin-top: 2px;
-  }
-
-  .nav-group {
-    padding: 0 12px;
-    margin-bottom: 6px;
-  }
-
-  .nav-label {
-    font-size: 10px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: var(--muted);
-    padding: 10px 8px 6px;
-  }
-
-  .nav-item {
-    display: block;
-    padding: 6px 10px;
-    border-radius: 6px;
-    color: var(--muted);
-    text-decoration: none;
-    font-size: 13px;
-    cursor: pointer;
-    transition: all 0.15s;
-    border: none;
-    background: none;
-    width: 100%;
-    text-align: left;
-  }
-
-  .nav-item:hover, .nav-item.active {
-    background: rgba(79, 142, 247, 0.1);
-    color: var(--accent);
-  }
-
-  /* ── Main ── */
-  .main {
-    flex: 1;
-    overflow-y: auto;
-    padding: 40px 48px;
-    max-width: 900px;
-  }
-
-  .hero {
-    margin-bottom: 48px;
-    padding-bottom: 32px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .hero h1 {
-    font-size: 32px;
-    font-weight: 700;
-    letter-spacing: -0.8px;
-    background: linear-gradient(135deg, #4f8ef7, #7c5cfc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 10px;
-  }
-
-  .hero p {
-    color: var(--muted);
-    font-size: 15px;
-    max-width: 560px;
-  }
-
-  /* ── Sections ── */
-  .section {
-    margin-bottom: 52px;
-    scroll-margin-top: 24px;
-  }
-
-  .section-title {
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: -0.4px;
-    margin-bottom: 6px;
-    color: var(--text);
     display: flex;
     align-items: center;
     gap: 10px;
   }
 
-  .section-title .icon {
-    width: 28px;
-    height: 28px;
-    border-radius: 7px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    background: rgba(79, 142, 247, 0.15);
-    flex-shrink: 0;
+  .sidebar-logo img {
+    border-radius: 6px;
   }
 
-  .section-desc {
-    color: var(--muted);
-    margin-bottom: 20px;
-    font-size: 13.5px;
+  .sidebar-logo .brand-text {
+    display: flex;
+    flex-direction: column;
   }
+
+  .sidebar-logo .brand {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+  }
+
+  .sidebar-logo .sub {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 1px;
+  }
+
+  .nav-group { padding: 0 12px; margin-bottom: 6px; }
+
+  .nav-label {
+    font-size: 10px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 1.2px; color: var(--muted); padding: 10px 8px 6px;
+  }
+
+  .nav-item {
+    display: block; padding: 6px 10px; border-radius: 6px;
+    color: var(--muted); text-decoration: none; font-size: 13px;
+    cursor: pointer; transition: all 0.15s; border: none;
+    background: none; width: 100%; text-align: left;
+  }
+
+  .nav-item:hover, .nav-item.active {
+    background: rgba(79, 142, 247, 0.1); color: var(--accent);
+  }
+
+  /* ── Main ── */
+  .main {
+    flex: 1; overflow-y: auto; padding: 40px 48px; max-width: 900px;
+  }
+
+  .hero {
+    margin-bottom: 48px; padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hero h1 {
+    font-size: 32px; font-weight: 700; letter-spacing: -0.8px;
+    background: linear-gradient(135deg, #4f8ef7, #7c5cfc);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; margin-bottom: 10px;
+  }
+
+  .hero p { color: var(--muted); font-size: 15px; max-width: 560px; }
+
+  /* ── Sections ── */
+  .section { margin-bottom: 52px; scroll-margin-top: 24px; }
+
+  .section-title {
+    font-size: 20px; font-weight: 700; letter-spacing: -0.4px;
+    margin-bottom: 6px; color: var(--text);
+    display: flex; align-items: center; gap: 10px;
+  }
+
+  .section-title .icon {
+    width: 28px; height: 28px; border-radius: 7px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; background: rgba(79, 142, 247, 0.15); flex-shrink: 0;
+  }
+
+  .section-desc { color: var(--muted); margin-bottom: 20px; font-size: 13.5px; }
 
   /* ── Code blocks ── */
   pre {
-    background: var(--code-bg);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 20px 22px;
-    overflow-x: auto;
-    margin: 14px 0;
-    position: relative;
+    background: var(--code-bg); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 20px 22px;
+    overflow-x: auto; margin: 14px 0; position: relative;
   }
 
   pre code {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12.5px;
-    line-height: 1.7;
-    color: #cdd6f4;
+    font-family: 'JetBrains Mono', monospace; font-size: 12.5px;
+    line-height: 1.7; color: #cdd6f4;
   }
 
   .copy-btn {
-    position: absolute;
-    top: 10px;
-    right: 12px;
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    border-radius: 5px;
-    color: var(--muted);
-    font-size: 11px;
-    padding: 3px 10px;
-    cursor: pointer;
-    font-family: 'Sora', sans-serif;
+    position: absolute; top: 10px; right: 12px;
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 5px; color: var(--muted); font-size: 11px;
+    padding: 3px 10px; cursor: pointer; font-family: 'Sora', sans-serif;
     transition: all 0.15s;
   }
 
   .copy-btn:hover { color: var(--accent); border-color: var(--accent); }
 
-  /* Syntax highlight colours */
-  .k { color: #cba6f7; }  /* keyword */
-  .s { color: #a6e3a1; }  /* string */
-  .c { color: #585b70; font-style: italic; } /* comment */
-  .t { color: #89b4fa; }  /* tag */
-  .a { color: #fab387; }  /* attribute */
-  .v { color: #f9e2af; }  /* value */
-  .j { color: #94e2d5; }  /* jinja */
+  .k { color: #cba6f7; } .s { color: #a6e3a1; }
+  .c { color: #585b70; font-style: italic; } .t { color: #89b4fa; }
+  .a { color: #fab387; } .v { color: #f9e2af; } .j { color: #94e2d5; }
 
-  /* ── Callout boxes ── */
+  /* ── Callout ── */
   .callout {
-    border-radius: var(--radius);
-    padding: 14px 18px;
-    margin: 16px 0;
-    display: flex;
-    gap: 12px;
-    font-size: 13px;
+    border-radius: var(--radius); padding: 14px 18px; margin: 16px 0;
+    display: flex; gap: 12px; font-size: 13px;
   }
-
   .callout-icon { flex-shrink: 0; font-size: 16px; }
-
   .callout.tip { background: rgba(52, 211, 153, 0.08); border: 1px solid rgba(52, 211, 153, 0.25); }
   .callout.tip .callout-icon { color: var(--green); }
-
   .callout.warn { background: rgba(251, 191, 36, 0.08); border: 1px solid rgba(251, 191, 36, 0.25); }
   .callout.warn .callout-icon { color: var(--yellow); }
-
   .callout.info { background: rgba(79, 142, 247, 0.08); border: 1px solid rgba(79, 142, 247, 0.25); }
   .callout.info .callout-icon { color: var(--accent); }
 
   /* ── Tables ── */
   .doc-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 14px 0;
-    font-size: 13px;
+    width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 13px;
   }
-
   .doc-table th {
-    background: var(--surface2);
-    color: var(--muted);
-    font-weight: 600;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    padding: 10px 14px;
-    text-align: left;
-    border: 1px solid var(--border);
+    background: var(--surface2); color: var(--muted); font-weight: 600;
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px;
+    padding: 10px 14px; text-align: left; border: 1px solid var(--border);
   }
-
   .doc-table td {
-    padding: 9px 14px;
-    border: 1px solid var(--border);
-    vertical-align: top;
-    color: var(--text);
+    padding: 9px 14px; border: 1px solid var(--border); vertical-align: top; color: var(--text);
   }
-
   .doc-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
 
   code.inline {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    background: var(--code-bg);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 1px 6px;
-    color: #f9e2af;
+    font-family: 'JetBrains Mono', monospace; font-size: 12px;
+    background: var(--code-bg); border: 1px solid var(--border);
+    border-radius: 4px; padding: 1px 6px; color: #f9e2af;
   }
 
-  /* ── Badges ── */
   .badge {
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 20px;
-    font-size: 11px;
-    font-weight: 600;
+    display: inline-block; padding: 2px 8px; border-radius: 20px;
+    font-size: 11px; font-weight: 600;
   }
-
   .badge-green { background: rgba(52, 211, 153, 0.15); color: var(--green); }
   .badge-red   { background: rgba(248, 113, 113, 0.15); color: var(--red); }
   .badge-blue  { background: rgba(79, 142, 247, 0.15);  color: var(--accent); }
 
-  /* ── Quick Reference ── */
+  /* ── Quick Ref ── */
   .quick-ref {
-    background: var(--code-bg);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 22px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6px 24px;
+    background: var(--code-bg); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 22px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px;
   }
-
   .quick-item {
-    display: flex;
-    gap: 10px;
-    padding: 6px 0;
+    display: flex; gap: 10px; padding: 6px 0;
     border-bottom: 1px solid rgba(255,255,255,0.04);
-    font-size: 12.5px;
-    align-items: flex-start;
+    font-size: 12.5px; align-items: flex-start;
   }
-
   .quick-item:last-child { border-bottom: none; }
-
   .quick-key {
-    font-family: 'JetBrains Mono', monospace;
-    color: var(--accent);
-    min-width: 90px;
-    flex-shrink: 0;
-    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace; color: var(--accent);
+    min-width: 90px; flex-shrink: 0; font-size: 12px;
   }
-
   .quick-val { color: var(--muted); }
 
-  /* ── Divider ── */
-  hr.section-rule {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: 40px 0;
-  }
+  hr.section-rule { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 
-  /* Responsive */
   @media (max-width: 768px) {
     .sidebar { display: none; }
     .main { padding: 24px 20px; }
@@ -336,20 +230,16 @@
 </head>
 <body>
 
-<div style="position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(15,17,23,0.92);backdrop-filter:blur(14px);border-bottom:1px solid #2a3045;padding:0 24px;height:48px;display:flex;align-items:center;justify-content:space-between;font-family:'Sora',sans-serif;">
-  <a href="index.html" style="color:#4f8ef7;font-size:13px;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:6px">← Back to FrapPDFy</a>
-  <span style="color:#8892a4;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1px">Print Format Guide</span>
-  <a href="https://github.com/krunal1904/frappdfy" target="_blank" style="color:#8892a4;font-size:12px;text-decoration:none">GitHub →</a>
-</div>
-<div style="height:48px"></div>
-
 <div class="shell">
 
   <!-- ══════════ SIDEBAR ══════════ -->
   <nav class="sidebar">
     <div class="sidebar-logo">
-      <div class="brand">⚡ FrapPDFy</div>
-      <div class="sub">Print Format Developer Guide</div>
+      <img src="images/FrapPDFy-48x48.png" alt="FrapPDFy">
+      <div class="brand-text">
+        <div class="brand">FrapPDFy</div>
+        <div class="sub">Developer Guide</div>
+      </div>
     </div>
 
     <div class="nav-group">
@@ -376,7 +266,8 @@
       <div class="nav-label">Advanced</div>
       <a class="nav-item" href="#css">CSS Tips</a>
       <a class="nav-item" href="#copies">Multi-Copy</a>
-      <a class="nav-item" href="#engines">WeasyPrint vs Playwright</a>
+      <a class="nav-item" href="#engines">WeasyPrint vs CDP</a>
+      <a class="nav-item" href="#remote">Remote PDF Service</a>
       <a class="nav-item" href="#pitfalls">Common Pitfalls</a>
       <a class="nav-item" href="#quickref">Quick Reference</a>
     </div>
@@ -387,13 +278,13 @@
 
     <div class="hero">
       <h1>Print Format Developer Guide</h1>
-      <p>Everything you need to build production-quality PDF print formats with FrapPDFy — from images and QR codes to multi-copy labels and page numbering.</p>
+      <p>Everything you need to build production-quality PDF print formats with FrapPDFy — from images and QR codes to multi-copy labels, page numbering, and remote PDF generation.</p>
     </div>
 
     <!-- ── OVERVIEW ── -->
     <section class="section" id="overview">
       <div class="section-title"><span class="icon">📋</span> Overview</div>
-      <p class="section-desc">FrapPDFy renders your Jinja2 HTML template against a Frappe document, then pipes it through WeasyPrint or Playwright (Chromium) to produce a PDF. Your template is stored in the <code class="inline">Print Format Template</code> doctype as a single HTML string, automatically split into three regions:</p>
+      <p class="section-desc">FrapPDFy renders your Jinja2 HTML template against a Frappe document, then generates a PDF using one of two engines: <strong>WeasyPrint</strong> (CSS paged media) or <strong>CDP</strong> (Chrome headless via raw DevTools Protocol). Your template is stored in the <code class="inline">Print Format Template</code> doctype as a single HTML string, automatically split into three regions:</p>
 
       <table class="doc-table">
         <thead><tr><th>Region</th><th>Class / ID</th><th>Purpose</th></tr></thead>
@@ -467,6 +358,15 @@
         </tbody>
       </table>
 
+      <p style="font-weight:600; margin: 20px 0 8px; color: var(--accent);">How each engine handles header/footer</p>
+      <table class="doc-table">
+        <thead><tr><th>Engine</th><th>Approach</th></tr></thead>
+        <tbody>
+          <tr><td>WeasyPrint</td><td>Uses CSS <code class="inline">position: running()</code> inside <code class="inline">@page</code> margin boxes. Native CSS paged media — most accurate.</td></tr>
+          <tr><td>CDP (Chrome)</td><td>3-PDF overlay: generates separate header, footer, and content PDFs, then stamps header/footer onto every content page using PyPDF2. No <code class="inline">displayHeaderFooter</code> — full CSS3 in header/footer.</td></tr>
+        </tbody>
+      </table>
+
       <div class="callout tip">
         <span class="callout-icon">✅</span>
         <span>Always use exactly <code class="inline">pdf-header</code> and <code class="inline">pdf-footer</code> as class names. Any typo means the section is treated as body content and will not repeat.</span>
@@ -478,15 +378,12 @@
     <!-- ── PAGE NUMBERS ── -->
     <section class="section" id="page-numbers">
       <div class="section-title"><span class="icon">🔢</span> Page Numbers</div>
-      <p class="section-desc">The approach differs depending on which PDF engine you use.</p>
+      <p class="section-desc">Page numbering works in both engines using the same HTML structure. Add these spans in your header or footer:</p>
 
-      <p style="font-weight:600; margin-bottom:8px; color: var(--accent);">WeasyPrint — CSS Counters</p>
-      <p class="section-desc" style="margin-bottom:10px;">Add these spans in your header or footer, then define the CSS:</p>
-
-      <pre><button class="copy-btn" onclick="copyCode(this)">Copy</button><code><span class="c">&lt;!-- HTML --&gt;</span>
+      <pre><button class="copy-btn" onclick="copyCode(this)">Copy</button><code><span class="c">&lt;!-- HTML — works in both engines --&gt;</span>
 <span class="t">&lt;span&gt;</span>Page <span class="t">&lt;span</span> <span class="a">class=</span><span class="s">"page-number"</span><span class="t">&gt;&lt;/span&gt;</span> of <span class="t">&lt;span</span> <span class="a">class=</span><span class="s">"total-pages"</span><span class="t">&gt;&lt;/span&gt;&lt;/span&gt;</span></code></pre>
 
-      <pre><button class="copy-btn" onclick="copyCode(this)">Copy</button><code><span class="c">/* Custom CSS field */</span>
+      <pre><button class="copy-btn" onclick="copyCode(this)">Copy</button><code><span class="c">/* Custom CSS — required for WeasyPrint engine */</span>
 <span class="k">.page-number</span>::before {
     <span class="a">content</span>: counter(page);
 }
@@ -494,15 +391,17 @@
     <span class="a">content</span>: counter(pages);
 }</code></pre>
 
-      <p style="font-weight:600; margin: 20px 0 8px; color: var(--accent);">Playwright — Chromium Template Classes</p>
-      <p class="section-desc" style="margin-bottom:10px;">Use special classes inside header/footer templates:</p>
+      <table class="doc-table">
+        <thead><tr><th>Engine</th><th>How It Works</th></tr></thead>
+        <tbody>
+          <tr><td>WeasyPrint</td><td>CSS <code class="inline">counter(page)</code> / <code class="inline">counter(pages)</code> fills the <code class="inline">::before</code> pseudo-element natively</td></tr>
+          <tr><td>CDP</td><td>Detects <code class="inline">.page-number</code> / <code class="inline">.total-pages</code> classes, generates a separate header/footer PDF per page with numbers injected</td></tr>
+        </tbody>
+      </table>
 
-      <pre><button class="copy-btn" onclick="copyCode(this)">Copy</button><code><span class="t">&lt;span</span> <span class="a">class=</span><span class="s">"pageNumber"</span><span class="t">&gt;&lt;/span&gt;</span>   <span class="c">&lt;!-- current page --&gt;</span>
-<span class="t">&lt;span</span> <span class="a">class=</span><span class="s">"totalPages"</span><span class="t">&gt;&lt;/span&gt;</span>   <span class="c">&lt;!-- total pages --&gt;</span></code></pre>
-
-      <div class="callout warn">
-        <span class="callout-icon">⚠️</span>
-        <span>Chromium's <code class="inline">pageNumber</code> / <code class="inline">totalPages</code> classes only work inside Playwright header/footer templates — they won't work in WeasyPrint. Use CSS counters for WeasyPrint.</span>
+      <div class="callout info">
+        <span class="callout-icon">ℹ️</span>
+        <span>Use the same HTML and CSS for both engines. WeasyPrint uses CSS counters; CDP replaces the span content directly. Page numbers reset per copy in multi-copy mode.</span>
       </div>
     </section>
 
@@ -511,7 +410,7 @@
     <!-- ── PAGE BREAKS ── -->
     <section class="section" id="page-breaks">
       <div class="section-title"><span class="icon">↕️</span> Page Breaks</div>
-      <p class="section-desc">These utility classes are pre-defined by the engine — do not redefine them in Custom CSS.</p>
+      <p class="section-desc">These utility classes are pre-defined by both engines — do not redefine them in Custom CSS.</p>
 
       <pre><button class="copy-btn" onclick="copyCode(this)">Copy</button><code><span class="c">&lt;!-- Force a page break AFTER this element --&gt;</span>
 <span class="t">&lt;div</span> <span class="a">class=</span><span class="s">"page-break"</span><span class="t">&gt;&lt;/div&gt;</span>
@@ -527,17 +426,20 @@
     <!-- ── IMAGES ── -->
     <section class="section" id="images">
       <div class="section-title"><span class="icon">🖼️</span> Images</div>
-      <p class="section-desc">Always convert image paths to absolute URLs — both engines fetch images over HTTP and cannot resolve relative paths.</p>
+      <p class="section-desc">FrapPDFy automatically embeds images as base64 data URIs before rendering. This means both public and private files work in PDFs — no authentication issues.</p>
 
       <pre><button class="copy-btn" onclick="copyCode(this)">Copy</button><code><span class="c">&lt;!-- From an Attach field on the document --&gt;</span>
 <span class="t">&lt;img</span> <span class="a">src=</span><span class="s">"<span class="j">{{ frappe.utils.get_url(doc.company_logo) }}</span>"</span> <span class="a">height=</span><span class="s">"50"</span><span class="t">&gt;</span>
 
 <span class="c">&lt;!-- From a hardcoded file path --&gt;</span>
-<span class="t">&lt;img</span> <span class="a">src=</span><span class="s">"<span class="j">{{ frappe.utils.get_url('/files/letterhead.png') }}</span>"</span> <span class="a">height=</span><span class="s">"80"</span><span class="t">&gt;</span></code></pre>
+<span class="t">&lt;img</span> <span class="a">src=</span><span class="s">"<span class="j">{{ frappe.utils.get_url('/files/letterhead.png') }}</span>"</span> <span class="a">height=</span><span class="s">"80"</span><span class="t">&gt;</span>
 
-      <div class="callout warn">
-        <span class="callout-icon">⚠️</span>
-        <span>Using <code class="inline">doc.image_field</code> directly (without <code class="inline">frappe.utils.get_url()</code>) will silently fail — the image will be blank in the PDF.</span>
+<span class="c">&lt;!-- Private files also work --&gt;</span>
+<span class="t">&lt;img</span> <span class="a">src=</span><span class="s">"<span class="j">{{ frappe.utils.get_url('/private/files/stamp.png') }}</span>"</span> <span class="a">height=</span><span class="s">"60"</span><span class="t">&gt;</span></code></pre>
+
+      <div class="callout tip">
+        <span class="callout-icon">✅</span>
+        <span>Always wrap image paths with <code class="inline">frappe.utils.get_url()</code>. Both public and private files are supported — FrapPDFy reads them from disk and embeds as base64 before sending to the PDF engine.</span>
       </div>
     </section>
 
@@ -587,27 +489,24 @@
       <div class="section-title"><span class="icon">🎨</span> CSS Tips &amp; Overrides</div>
       <p class="section-desc">All custom CSS goes in the <strong>Custom CSS</strong> field of the Print Format Template. Page size and orientation are set via the doctype fields — not CSS.</p>
 
-      <pre><button class="copy-btn" onclick="copyCode(this)">Copy</button><code><span class="c">/* Universal reset */</span>
+      <pre><button class="copy-btn" onclick="copyCode(this)">Copy</button><code><span class="c">/* Recommended base CSS for every template */</span>
 * {
     <span class="a">margin</span>: 0;
     <span class="a">padding</span>: 0;
     <span class="a">box-sizing</span>: border-box;
 }
 
-<span class="c">/* Tables */</span>
 <span class="k">table</span> {
     <span class="a">table-layout</span>: fixed;
     <span class="a">width</span>: 100%;
     <span class="a">border-collapse</span>: collapse;
 }
 
-<span class="c">/* Prevent table rows splitting across pages */</span>
 <span class="k">tr</span> {
     <span class="a">break-inside</span>: avoid;
     <span class="a">page-break-inside</span>: avoid;
 }
 
-<span class="c">/* Remove Quill editor default padding */</span>
 <span class="k">.ql-editor</span> {
     <span class="a">padding</span>: 0;
     <span class="a">margin</span>: 0;
@@ -636,7 +535,7 @@
     <!-- ── MULTI COPY ── -->
     <section class="section" id="copies">
       <div class="section-title"><span class="icon">📑</span> Multi-Copy &amp; Copy Labels</div>
-      <p class="section-desc">Print multiple copies (e.g. Original, Duplicate, Triplicate) in one PDF, each with different labels.</p>
+      <p class="section-desc">Print multiple copies (e.g. Original, Duplicate, Triplicate) in one PDF, each with different labels. Page numbers reset per copy.</p>
 
       <p style="font-weight:600; margin-bottom:8px;">Step 1 — Set fields in Print Format Template</p>
       <table class="doc-table">
@@ -675,19 +574,22 @@
 
     <!-- ── ENGINES ── -->
     <section class="section" id="engines">
-      <div class="section-title"><span class="icon">⚙️</span> WeasyPrint vs Playwright</div>
-      <p class="section-desc">Choose the right engine for your template's requirements.</p>
+      <div class="section-title"><span class="icon">⚙️</span> WeasyPrint vs CDP (Chrome)</div>
+      <p class="section-desc">Choose the right engine for your template's requirements. Set the engine per template in the <code class="inline">pdf_engine</code> field.</p>
 
       <table class="doc-table">
-        <thead><tr><th>Feature</th><th>WeasyPrint</th><th>Playwright</th></tr></thead>
+        <thead><tr><th>Feature</th><th>WeasyPrint</th><th>CDP (Chrome)</th></tr></thead>
         <tbody>
           <tr><td>CSS Paged Media (<code class="inline">@page</code>)</td><td><span class="badge badge-green">✅ Full</span></td><td><span class="badge badge-red">❌ No</span></td></tr>
-          <tr><td>CSS counters (page numbers)</td><td><span class="badge badge-green">✅</span></td><td><span class="badge badge-red">❌</span></td></tr>
-          <tr><td>JavaScript rendering</td><td><span class="badge badge-red">❌</span></td><td><span class="badge badge-green">✅</span></td></tr>
-          <tr><td>Flexbox / Grid support</td><td><span class="badge badge-blue">Partial</span></td><td><span class="badge badge-green">✅ Full</span></td></tr>
-          <tr><td>Background images in headers</td><td><span class="badge badge-green">✅</span></td><td><span class="badge badge-green">✅</span></td></tr>
-          <tr><td>Minimum page margin</td><td>None</td><td>~6.35mm per side</td></tr>
-          <tr><td>Speed</td><td>Faster</td><td>Slower (browser launch)</td></tr>
+          <tr><td>CSS Grid / Flexbox</td><td><span class="badge badge-blue">Partial</span></td><td><span class="badge badge-green">✅ Full</span></td></tr>
+          <tr><td>CSS counters (page numbers)</td><td><span class="badge badge-green">✅ Native</span></td><td><span class="badge badge-green">✅ Injected</span></td></tr>
+          <tr><td>Gradients / Transforms / Filters</td><td><span class="badge badge-blue">Partial</span></td><td><span class="badge badge-green">✅ Full</span></td></tr>
+          <tr><td>True 0mm margins</td><td><span class="badge badge-green">✅ Yes</span></td><td><span class="badge badge-green">✅ Yes</span></td></tr>
+          <tr><td>Full CSS3 in header/footer</td><td><span class="badge badge-green">✅</span></td><td><span class="badge badge-green">✅</span></td></tr>
+          <tr><td>Private file images</td><td><span class="badge badge-green">✅ Embedded</span></td><td><span class="badge badge-green">✅ Embedded</span></td></tr>
+          <tr><td>Header/footer repeat</td><td><span class="badge badge-green">✅ CSS running()</span></td><td><span class="badge badge-green">✅ 3-PDF overlay</span></td></tr>
+          <tr><td>Speed</td><td><span class="badge badge-green">Fast</span></td><td><span class="badge badge-blue">Moderate</span></td></tr>
+          <tr><td>Dependencies</td><td>weasyprint + playwright</td><td>websockets + Chrome (auto-downloads)</td></tr>
         </tbody>
       </table>
 
@@ -695,9 +597,66 @@
         <span class="callout-icon">💡</span>
         <div>
           <strong>Recommendation:</strong><br>
-          Use <strong>WeasyPrint</strong> for document-style reports with running headers/footers and CSS page numbers.<br>
-          Use <strong>Playwright</strong> for complex modern layouts requiring full CSS/JS support.
+          Use <strong>WeasyPrint</strong> for document-style reports with running headers/footers and CSS page counters.<br>
+          Use <strong>CDP</strong> for modern layouts requiring full CSS3 Grid, Flexbox, gradients, and browser-accurate rendering.
         </div>
+      </div>
+
+      <div class="callout warn">
+        <span class="callout-icon">⚠️</span>
+        <span>No fallback between engines. If the selected engine is unavailable, you get an error — not a silent switch. Install the required dependencies for your chosen engine.</span>
+      </div>
+    </section>
+
+    <hr class="section-rule">
+
+    <!-- ── REMOTE PDF SERVICE ── -->
+    <section class="section" id="remote">
+      <div class="section-title"><span class="icon">🌐</span> Remote PDF Service</div>
+      <p class="section-desc">Offload PDF generation to a separate Frappe site — useful when your production server can't run Chrome or has memory constraints.</p>
+
+      <p style="font-weight:600; margin-bottom:10px;">How it works</p>
+      <pre><button class="copy-btn" onclick="copyCode(this)">Copy</button><code>Production Site                    PDF Service Site
+(frappdfy installed)               (frappdfy installed)
+        │                                  │
+        │  Renders template, extracts      │
+        │  header/footer/content           │
+        │                                  │
+        │── POST (HTML + settings) ───────▶│
+        │                                  │  Generates PDF
+        │◀── { pdf_base64: "..." } ────────│
+        │                                  │
+        │  Decodes + streams to browser    │</code></pre>
+
+      <p style="font-weight:600; margin: 20px 0 8px;">Setup</p>
+      <table class="doc-table">
+        <thead><tr><th>Step</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Install FrapPDFy on the remote PDF service site</td></tr>
+          <tr><td>2</td><td>Create API keys on the service site: <code class="inline">User → API Access → Generate Keys</code></td></tr>
+          <tr><td>3</td><td>On production site, go to <strong>FrapPDFy Settings</strong> and fill in Service URL, API Key, API Secret</td></tr>
+          <tr><td>4</td><td>Generate any PDF — it automatically routes to the remote site</td></tr>
+        </tbody>
+      </table>
+
+      <p style="font-weight:600; margin: 20px 0 8px;">FrapPDFy Settings</p>
+      <table class="doc-table">
+        <thead><tr><th>Field</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Service URL</td><td><code class="inline">https://pdf.yourcompany.com</code></td></tr>
+          <tr><td>API Key</td><td>From remote site's user API access</td></tr>
+          <tr><td>API Secret</td><td>From remote site (stored encrypted in Frappe)</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout info">
+        <span class="callout-icon">ℹ️</span>
+        <span>When a Service URL is configured, <strong>all</strong> PDF generation routes through the remote site. The engine selection (WeasyPrint or CDP) is sent to the remote site and executed there.</span>
+      </div>
+
+      <div class="callout tip">
+        <span class="callout-icon">✅</span>
+        <span>Both engines work with remote delegation. Private images are embedded as base64 before sending, so no authentication issues on the remote side.</span>
       </div>
     </section>
 
@@ -712,12 +671,14 @@
         <tbody>
           <tr><td>Images not showing</td><td>Relative URL</td><td>Use <code class="inline">frappe.utils.get_url(path)</code></td></tr>
           <tr><td>Header/footer missing</td><td>Wrong class name</td><td>Must be exactly <code class="inline">pdf-header</code> / <code class="inline">pdf-footer</code></td></tr>
-          <tr><td>Page numbers not working</td><td>Wrong engine/CSS</td><td>See Page Numbers section above</td></tr>
+          <tr><td>Page numbers show 0</td><td>Testing in browser</td><td>CSS counters only work in actual PDF output, not browser preview</td></tr>
           <tr><td>Extra padding in rich text</td><td>Quill defaults</td><td>Add <code class="inline">.ql-editor { padding: 0; margin: 0; }</code></td></tr>
           <tr><td>Table rows split across pages</td><td>Missing CSS</td><td>Add <code class="inline">tr { break-inside: avoid; }</code></td></tr>
-          <tr><td>Margins ignored (Playwright)</td><td>Engine minimum</td><td>Playwright enforces ~6.35mm minimum margin</td></tr>
           <tr><td>QR code too large/small</td><td>Default size</td><td>Override with <code class="inline">.qrcode { width: 90px; }</code></td></tr>
-          <tr><td>Content cut off</td><td>Header/footer too tall</td><td>Increase top/bottom margin in Print Format settings</td></tr>
+          <tr><td>Content cut off</td><td>Header/footer too tall</td><td>Increase top/bottom margin in settings</td></tr>
+          <tr><td>CDP engine not available</td><td>Missing websockets</td><td>Run <code class="inline">pip install websockets</code> — Chrome auto-downloads</td></tr>
+          <tr><td>WeasyPrint measurement error</td><td>Playwright not installed</td><td>Run <code class="inline">pip install playwright && playwright install chromium</code></td></tr>
+          <tr><td>Engine error instead of fallback</td><td>By design</td><td>No silent fallback — install dependencies for your chosen engine</td></tr>
         </tbody>
       </table>
     </section>
@@ -751,12 +712,12 @@
           <span class="quick-val">&lt;div class="pdf-content"&gt;...&lt;/div&gt;</span>
         </div>
         <div class="quick-item">
-          <span class="quick-key">QR code</span>
-          <span class="quick-val">{{ web_block('e-Invoice QR', values={...}) }}</span>
+          <span class="quick-key">Engine</span>
+          <span class="quick-val">weasyprint | cdp</span>
         </div>
         <div class="quick-item">
-          <span class="quick-key">QR size</span>
-          <span class="quick-val">.qrcode { width: 90px; }</span>
+          <span class="quick-key">QR code</span>
+          <span class="quick-val">{{ web_block('e-Invoice QR', values={...}) }}</span>
         </div>
         <div class="quick-item">
           <span class="quick-key">Rich text</span>
@@ -795,7 +756,6 @@
     });
   }
 
-  // Active nav on scroll
   const sections = document.querySelectorAll('.section');
   const navItems = document.querySelectorAll('.nav-item');
 
